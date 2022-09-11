@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Somando Números</title>
+
+  <style>
+    div {
+      display: inline-block;
+    }
+
+    #res {
+      margin-top: 10px;
+    }
+  </style>
+
+</head>
+<body>
+  <h1>Somando Valores</h1>
+  <fieldset>
+    <legend>Calculadora</legend>
+    <div>
+      <label for="txtn1">Primeiro Número</label> <br>
+      <input type="number" name="txtn1" id="txtn1"> +
+    </div>
+    <div>
+      <label for="txtn2">Segundo Número</label> <br>
+      <input type="number" name="txtn2" id="txtn2">
+    </div>
+    <input type="button" value="Somar" onclick="somar()"> <br>
+    <div id="res">Resultado</div>
+  </fieldset>
+
+  <script>
+      function somar() {
+        let tn1 = window.document.getElementById('txtn1')
+        let tn2 = window.document.querySelector('#txtn2')
+        let res = window.document.getElementById('res')
+        let n1 = Number(tn1.value)
+        let n2 = Number(tn2.value)
+        let s = n1 + n2
+        res.innerHTML = `A soma de ${n1} e ${n2} é igual a <strong>${s}</strong>.`
+      }
+  </script>
+
+</body>
+</html>
